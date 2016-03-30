@@ -1,0 +1,22 @@
+{
+  "name": "superlatief-mixins",
+  "version": "0.0.1",
+  "description": "A custom set of stylus and sass functions and mixins",
+  "repository": "https://github.com/michaeldeboeve/superlatief-mixins",
+  "keywords": [
+    "mixins",
+    "functions",
+    "sass",
+    "scss",
+    "stylus",
+    "superlatief",
+    "robonkey"
+  ],
+  "author": "Michaël de Boevé",
+  "license": "MIT",
+  "dependencies": {},
+  "files": [
+    "scss",
+    "stylus"
+  ]
+}
