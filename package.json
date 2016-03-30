@@ -1,6 +1,6 @@
 {
   "name": "superlatief-mixins",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom set of stylus and sass functions and mixins",
   "repository": "https://github.com/michaeldeboeve/superlatief-mixins",
   "keywords": [
