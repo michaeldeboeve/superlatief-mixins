@@ -1,7 +1,7 @@
 {
   "name": "superlatief-mixins",
   "description": "A custom set of stylus and sass functions and mixins",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "",
   "authors": [
     "Michaël de Boevé"
