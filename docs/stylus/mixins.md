@@ -11,10 +11,10 @@ This is my personal mixin library, gathered over the years.
 - [Coverer](#coverer)
 - [Equal padding inline element](#equal-padding-inline-element)
 - [Flexvideo](#flexvideo)
+- [Font Face](#font-face)
 - [Ghost arrow](#ghost-arrow)
 - [Hamburger](#hamburger)
 - [Hide text](#hide-text)
-- [Load font](#load-font)
 - [Media queries](#media-queries)
 - [Placeholder](#placeholder)
 - [Position](#position)
@@ -261,6 +261,28 @@ This is my personal mixin library, gathered over the years.
   left: 0;
   width: 100%;
   height: 100%;
+}
+```
+
+### Font Face
+> Declare @font-face<br>
+> Uses the assets function
+
+##### Use:
+
+```sh
+font-face('fontname', 'fontfile', 'fontfolder', weight, style, eot woff2 woff ttf svg);
+```
+
+##### Output:
+
+```sh
+@font-face {
+  font-family: 'fontname';
+  font-weight: weight;
+  font-style: style;
+  src: url("../assets/fonts/fontfolder/fontfile.eot");
+  src: url("../assets/fonts/fontfolder/fontfile.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontfolder/fontfile.woff2") format("woff2"), url("../assets/fonts/fontfolder/fontfile.woff") format("woff"), url("../assets/fonts/fontfolder/fontfile.ttf") format("truetype"), url("../assets/fonts/fontfolder/fontfile.svg#fontname") format("svg");
 }
 ```
 

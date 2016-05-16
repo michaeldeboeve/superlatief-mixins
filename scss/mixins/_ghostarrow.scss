@@ -1,5 +1,4 @@
 @mixin ghost-arrow($size: 16px, $color: red, $width: 1px, $direction: right) {
-  @extend .transition;
   @if $direction == top {
       transform: rotate(-135deg);
   } @else if $direction == left {

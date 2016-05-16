@@ -13,7 +13,7 @@ $fnt = $asset-fonts-path;
 /// @param {String} $file - Asset file name, including extension
 /// @return {URL} - A `url()` function leading to the asset
 asset($type, $file)
-  return url($base + '/' + $type + '/' + $file);
+  return url(pathjoin($base, $type, $file));
 
 /// Image asset helper
 /// @access public

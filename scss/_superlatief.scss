@@ -5,6 +5,7 @@
 @import "functions/ease";
 @import "functions/fontweights";
 @import "functions/opposite-direction";
+@import "functions/str-replace";
 
 
 // Mixins
@@ -15,10 +16,11 @@
 @import "mixins/coverer";
 @import "mixins/equal-padding-inline-span";
 @import "mixins/flexvideo";
+@import "mixins/font-face";
 @import "mixins/ghostarrow";
 @import "mixins/hamburger";
 @import "mixins/hidetext";
-@import "mixins/loadfont";
+// @import "mixins/loadfont";
 @import "mixins/optional-at-root";
 @import "mixins/placeholder";
 @import "mixins/position";

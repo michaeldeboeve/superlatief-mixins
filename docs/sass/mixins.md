@@ -11,6 +11,7 @@ This is my personal mixin library, gathered over the years.
 - [Coverer](#coverer)
 - [Equal padding inline element](#equal-padding-inline-element)
 - [Flexvideo](#flexvideo)
+- [FontFace](#font-face)
 - [Ghost arrow](#ghost-arrow)
 - [Hamburger](#hamburger)
 - [Hide text](#hide-text)
@@ -284,6 +285,28 @@ This is my personal mixin library, gathered over the years.
 }
 ```
 
+### Font Face
+> Declare @font-face<br>
+> Uses the str-replace and assets functions
+
+##### Use:
+
+```sh
+@include font-face('fontname', 'fontfile', 'fontfolder', weight, style, eot woff2 woff ttf svg);
+```
+
+##### Output:
+
+```sh
+@font-face {
+  font-family: 'fontname';
+  font-weight: weight;
+  font-style: style;
+  src: url("../assets/fonts/fontfolder/fontfile.eot");
+  src: url("../assets/fonts/fontfolder/fontfile.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontfolder/fontfile.woff2") format("woff2"), url("../assets/fonts/fontfolder/fontfile.woff") format("woff"), url("../assets/fonts/fontfolder/fontfile.ttf") format("truetype"), url("../assets/fonts/fontfolder/fontfile.svg#fontname") format("svg");
+}
+```
+
 ### Ghost arrow
 > An arrow mixin based on a square with borders on two sides declared and rotated
 
@@ -378,28 +401,6 @@ This is my personal mixin library, gathered over the years.
   display: block;
   width: 100%;
   height: 100%;
-}
-```
-
-### Load font
-> Declare font
-> Uses the assets function
-
-##### Use:
-
-```sh
-@include load-font('fontname', 'fontfolder', 'fontfile', weight, style);
-```
-
-##### Output:
-
-```sh
-@font-face {
-  font-family: 'fontname';
-  src: url("../assets/fonts/fontfolder/fontfile.eot");
-  src: url("../assets/fonts/fontfolder/fontfile.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/fontfolder/fontfile.woff2") format("woff2"), url("../assets/fonts/fontfolder/fontfile.woff") format("woff"), url("../assets/fonts/fontfolder/fontfile.ttf") format("truetype"), url("../assets/fonts/fontfolder/fontfile.svg#fontfile") format("svg");
-  font-weight: weight;
-  font-style: style;
 }
 ```
 
@@ -673,7 +674,6 @@ a.foo {
 - [Mixins](/docs/sass/mixins.md)
 
 ###### Stylus
-	
+
 - [Functions](/docs/stylus/functions.md)
 - [Mixins](/docs/stylus/mixins.md)
-

@@ -1,0 +1,38 @@
+font-face($name, $file = $name, $folder = $file, $weight = null, $style = null, $exts = eot woff2 woff ttf svg)
+  $src = null
+  $extmods = {eot: "?", svg: "#" + replace(" ", "_", $name)}
+  $formats = {eot: "embedded-opentype", otf: "opentype", ttf: "truetype"}
+
+  for $ext in $exts
+    $extmod = $ext
+    $format = $ext
+    if $ext in $extmods
+      $extmod = $ext + $extmods[$ext]
+    if $ext in $formats
+      $format = $formats[$ext]
+
+    $path = pathjoin($folder, ($file + '.' + $extmod))
+    $fontdecl = font($path) + ' format("' + $format + '")'
+
+    if $src == null
+      $src = $fontdecl
+    else
+      $src = join(', ', $src, $fontdecl)
+
+
+
+  @font-face
+    font-family: $name
+
+    if $weight
+      font-weight: $weight
+      
+    if $style
+      font-style: $style
+
+    if index($exts, eot)
+      $path = pathjoin($folder, ($file + '.eot'))
+      $fontdecl = font($path)
+      src: unquote($fontdecl)
+
+    src: unquote($src)
