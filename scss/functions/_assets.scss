@@ -3,7 +3,7 @@
 /// @access public
 /// @type String
 
-$base: if(variable-exists(asset-base-path), $asset-base-path, '../assets');
+$base: if(variable-exists(asset-base-path), $asset-base-path, '../');
 $img: if(variable-exists(asset-images-path), $asset-images-path, 'images');
 $fnt: if(variable-exists(asset-fonts-path), $asset-fonts-path, 'fonts');
 
