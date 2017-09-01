@@ -2,8 +2,14 @@
 /// ugly, here is a mixin providing a friendly API to do so.
 /// @author Hugo Giraudel
 /// @param {String} $element-selector - Element selector
-@mixin qualify($element-selector) {
-  @at-root #{$element-selector + &} {
+@mixin qualify($args...) {
+  $selectors: ();
+
+  @each $selector in $args {
+    $selectors: append($selectors, unquote('#{$selector + &}'), 'comma')
+  }
+
+  @at-root #{$selectors} {
     @content;
   }
 }
